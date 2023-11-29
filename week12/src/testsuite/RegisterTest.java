@@ -43,15 +43,15 @@ public class RegisterTest extends BaseTest {
         driver.findElement(By.xpath("//div[@class='center-1']/div/div[2]/form /div/div[2]/div[5]/input")).sendKeys("kinjalshah2@yahoo.com");
 
        //  * Enter Password
-        driver.findElement(By.id("Password")).sendKeys("123456");
+        driver.findElement(By.id("Password")).sendKeys("123846");
+
         // * Enter Confirm password
-        driver.findElement(By.id("ConfirmPassword")).sendKeys("123456");
+        driver.findElement(By.id("ConfirmPassword")).sendKeys("123846");
+
        //* Click on REGISTER button
         driver.findElement(By.id("register-button")).click();
 
-
-
-         //* Verify the text 'Your registration completed’
+        //* Verify the text 'Your registration completed’
         String actualResult = driver.findElement(By.className("result")).getText();
         System.out.println(actualResult);
         String expectedResult = "Your registration completed";

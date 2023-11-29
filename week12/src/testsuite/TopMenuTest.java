@@ -94,7 +94,7 @@ public class TopMenuTest extends BaseTest {
     }
     @After
     public void endTest(){
-        closeBrowser();
+      //  closeBrowser();
     }
 }
 

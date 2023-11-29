@@ -15,11 +15,11 @@ public class LoginTest extends BaseTest {
     @Test
     public void userSholdLoginSuccessfullyWithValidCredentials(){
 //        * Enter “Admin” username
-        driver.findElement(By.name("username")).sendKeys("Admin");
+      driver.findElement(By.name("username")).sendKeys("Admin");
 //                * Enter “admin123“ password
         driver.findElement(By.name("password")).sendKeys("admin123");
 //                * Click on ‘LOGIN’ button
-        driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")).click();
+        driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
 
 //      * Verify the ‘Dashboard’ text is display
 //       String actualResult =  driver.findElement(By.xpath("//ul[@class='oxd-main-menu']/li[8]/a/span")).getText();

@@ -1,3 +1,5 @@
 
-^
-java:S2094"BRemove this empty class, write its code or make it an "interface".(˜ù×J8‹¡ß¬Á1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘œ¨8º‡²ÔÁ1
+G	java:S106"+Replace this use of System.out by a logger.(Ö˜½8Â‡²ÔÁ1
+G	java:S1068"+Replace this use of System.out by a logger.(Ö˜½8ä‡²ÔÁ1
+]	java:S125?"<This block of commented-out lines of code should be removed.(ëÎêëùÿÿÿÿ8ç‡²ÔÁ1

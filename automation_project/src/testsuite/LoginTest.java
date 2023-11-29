@@ -122,27 +122,29 @@ public class LoginTest extends BaseTest {
 //     1. Launch browser
 //     2. Navigate to url 'http://automationexercise.com'
 //     3. Verify that home page is visible successfully
-     String actualResult5 = driver.findElement(By.xpath("")).getText();
-     System.out.println(actualResult5);
-     String expectedResult5 = "";
-     Assert.assertEquals(actualResult5,expectedResult5);
+     boolean result = driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[1]/a")).isEnabled();
+     System.out.println(result);
 
 
 //     4. Click on 'Signup / Login' button
-     driver.findElement(By.xpath("")).click();
+     driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[4]/a")).click();
 
 //     5. Verify 'New User Signup!' is visible
-     driver.findElement(By.xpath("")).getText();
+     String actualResult11 = driver.findElement(By.xpath("//div[@class='signup-form']/h2")).getText();
+     System.out.println(actualResult11);
+     String expectedResult11 = "New User Signup!";
 
 //     6. Enter name and already registered email address
-     driver.findElement(By.xpath("")).sendKeys(""); //name
-     driver.findElement(By.xpath("")).sendKeys(""); //email address
+     driver.findElement(By.xpath("//form[@action='/signup']/input[2]")).sendKeys("kinjal"); //name
+     driver.findElement(By.xpath("//form[@action='/signup']/input[3]")).sendKeys("kinjalshah210@yahoo.com"); //email address
 
 //     7. Click 'Signup' button
-     driver.findElement(By.xpath("")).click();
+     driver.findElement(By.xpath("//form[@action='/signup']/button")).click();
 
 //     8. Verify error 'Email Address already exist!' is visible
-     driver.findElement(By.xpath("")).getText();
+    String actualResult12 =  driver.findElement(By.xpath("//form[@action='/signup']/p")).getText();
+     System.out.println(actualResult12);
+     String expectedResult ="Email Address already exist!";
     }
 
     @Test
@@ -181,25 +183,21 @@ public class LoginTest extends BaseTest {
      Assert.assertEquals(actualResult8,expectedResult8);
 
 //     6. The products list is visible
-  //   String actualResult9 = driver.findElement(By.xpath("")).getText();
-  //   System.out.println(actualResult9);
-   //  String expectedResult9 = "";
-    // Assert.assertEquals(actualResult9,expectedResult9);
 
 //   7. Click on 'View Product' of first product
    driver.findElement(By.xpath("//a[@href='/product_details/1']")).click();
-////     8. User is landed to product detail page -skip
+//     8. User is landed to product detail page -skip
+
+//    9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
+    driver.findElement(By.xpath("//div[@class='product-information']/h2")).getText();   // productname
 //
-////     9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
-//     driver.findElement(By.xpath("//div[@class='product-information']/h2")).getText();   // productname
+    driver.findElement(By.xpath("//div[@class='product-information']/p")).getText(); //categort
 //
-//     driver.findElement(By.xpath("//div[@class='product-information']/p")).getText(); //categort
+   driver.findElement(By.xpath("//div[@class='product-information']/span/span[1]")).getText();   //price
 //
-//     driver.findElement(By.xpath("//div[@class='product-information']/span/span[1]")).getText();   //price
+   driver.findElement(By.xpath("//div[@class='product-information']/p[2]")).getText();//Availability
 //
-//     driver.findElement(By.xpath("//div[@class='product-information']/p[2]")).getText();//Availability
-//
-//     driver.findElement(By.xpath("//div[@class='product-information']/p[4]")).getText();//brand
+    driver.findElement(By.xpath("//div[@class='product-information']/p[4]")).getText();//brand
     }
 
     @Test
@@ -214,9 +212,9 @@ public class LoginTest extends BaseTest {
      driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[2]/a")).click();
 
 //     5. Verify user is navigated to ALL PRODUCTS page successfully
-     String actualResult9 = driver.findElement(By.xpath("")).getText();
+     String actualResult9 = driver.findElement(By.xpath("//div[@class='features_items']/h2")).getText();
      System.out.println(actualResult9);
-     String expectedResult9 = "";
+     String expectedResult9 = "ALL PRODUCTS";
      Assert.assertEquals(actualResult9,expectedResult9);
 
 //     6. Enter product name in search input and click search button
@@ -227,9 +225,9 @@ public class LoginTest extends BaseTest {
 
 
 //     7. Verify 'SEARCHED PRODUCTS' is visible
-     String actualResult10 = driver.findElement(By.xpath("")).getText();
-     System.out.println(actualResult9);
-     String expectedResult10 = "";
+     String actualResult10 = driver.findElement(By.xpath("//h2[@class='title text-center']")).getText();
+     System.out.println(actualResult10);
+     String expectedResult10 = "SEARCHED PRODUCTS";
      Assert.assertEquals(actualResult10,expectedResult10);
 
 //     8. Verify all the products related to search are visible

@@ -18,6 +18,7 @@ public class RegisterTest extends BaseTest {
     public void UserShouldNavigateToRegisterPageSuccessfully(){
        // * click on the ‘Register’ link
         driver.findElement(By.className("ico-register")).click();
+
         //  * Verify the text ‘Register’
         String actualResult = driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText();
         System.out.println(actualResult);
@@ -39,7 +40,7 @@ public class RegisterTest extends BaseTest {
         driver.findElement(By.xpath("//div[@class='center-1']/div/div[2]/form /div/div[2]/div[3]/input")).sendKeys("Shah");
         //* Select Day Month and Year
 
-          //* Enter Email address
+        //* Enter Email address
         driver.findElement(By.xpath("//div[@class='center-1']/div/div[2]/form /div/div[2]/div[5]/input")).sendKeys("kinjalshah2@yahoo.com");
 
        //  * Enter Password

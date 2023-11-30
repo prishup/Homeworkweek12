@@ -1,5 +1,5 @@
 
 j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ﬂëú®8∫á≤‘¡1
-G	java:S106"+Replace this use of System.out by a logger.(ù÷òΩ8¬á≤‘¡1
-G	java:S1068"+Replace this use of System.out by a logger.(ù÷òΩ8‰á≤‘¡1
-]	java:S125?"<This block of commented-out lines of code should be removed.(ÎŒÍÎ˘ˇˇˇˇ8Áá≤‘¡1
+G	java:S106"+Replace this use of System.out by a logger.(ù÷òΩ8¬á≤‘¡1
+G	java:S1069"+Replace this use of System.out by a logger.(ù÷òΩ8‰á≤‘¡1
+]	java:S125@"<This block of commented-out lines of code should be removed.(ÎŒÍÎ˘ˇˇˇˇ8Áá≤‘¡1

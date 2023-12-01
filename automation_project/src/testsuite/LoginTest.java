@@ -182,7 +182,7 @@ public class LoginTest extends BaseTest {
      String expectedResult8 = "ALL PRODUCTS";
      Assert.assertEquals(actualResult8,expectedResult8);
 
-//     6. The products list is visible
+//     6. The products list is visible444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444z4444444444444444444e
 
 //   7. Click on 'View Product' of first product
    driver.findElement(By.xpath("//a[@href='/product_details/1']")).click();
